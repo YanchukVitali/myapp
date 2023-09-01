@@ -5,9 +5,12 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <div>New tires</div>
+      <!--
+       <div>New tires</div>
       <div>New rotors</div>
       <div>New pads</div>
+      -->
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

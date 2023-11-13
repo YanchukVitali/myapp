@@ -1,28 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {NewComponent} from "./NewComponent";
+import {Cars} from "./Cars";
 
 function App() {
-  return (
-    <div className="App">
+    const students = [
+        {id: 1, name: "Vit", age: 33},
+        {id: 2, name: "Dima", age: 32},
+        {id: 3, name: "Oleg", age: 45},
+        {id: 4, name: "Kevin", age: 34},
+        {id: 5, name: "Alex", age: 35},
+        {id: 6, name: "Alex2", age: 35},
+        {id: 7, name: "Max", age: 33},
+        {id: 8, name: "Gil", age: 50},
+        {id: 9, name: "Dil", age: 36}
+    ]
 
-<div>Delete new branch</div>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const topCars = [
+        {manufacturer: 'BMW', model: 'm5cs'},
+        {manufacturer: 'Mercedes', model: 'e63s'},
+        {manufacturer: 'Audi', model: 'rs6'}
+    ]
+
+
+    return (
+        <div className="App">
+            <NewComponent students={students}/>
+            <Cars topCars={topCars}/>
+        </div>
+    )
 }
 
 export default App;

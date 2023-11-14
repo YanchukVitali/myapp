@@ -1,5 +1,5 @@
 import React from "react";
-import {type} from "os";
+
 
 type NewComponentType = {
     /*    students: Array<StudentType> or like this   */

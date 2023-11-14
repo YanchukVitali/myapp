@@ -6,17 +6,19 @@ type CarsType = {
 type CarsNameType = {
     manufacturer: string
     model: string | number
+    id: number
 }
 export const Cars = (props: CarsType) => {
 
     return (
         <table>
-            {props.topCars.map((ObjectFromCarsNameType, element)=>{
+            {props.topCars.map((ArrayCarsNameType, index)=>{
+                debugger
                 return (
                     <div>
-                        <tr key={ObjectFromCarsNameType.model}>
-                            <th>{ObjectFromCarsNameType.manufacturer}</th>
-                            <th>{ObjectFromCarsNameType.model}</th>
+                        <tr key={ArrayCarsNameType.id}>
+                            <th>{ArrayCarsNameType.manufacturer}</th>
+                            <td>{ArrayCarsNameType.model}</td>
 
                         </tr>
                     </div>

@@ -41,29 +41,21 @@ const NewButton = () => {
        const mySecondFollower = (event: React.MouseEvent<HTMLButtonElement>) => {
            console.log("Hello Ivan")
        }*/
-    /*  const onClickHandler =(name:string) => {
-          console.log(name)
-      }
+    /*    const onClickHandler =(name:string) => {
+            console.log(name)
+        }
   */
-
-    const examp1 = ()=>{
-        console.log(100200)
-    }
-    const examp2 =(name:number)=>{
-        console.log(name)
-    }
-
 
     return (
         <div className={"NewButton"}>
             {/*<button onClick={(event) => {console.log("Hello")}}>NewButton</button>*/}
             {/*<button onClick={myFirstFollower}>NewButton-2</button>
             <button onClick={mySecondFollower}>NewButton-3</button>*/}
-            {/* <button onClick={(event: React.MouseEvent<HTMLButtonElement>)=>onClickHandler("Vit")}>NewButton-2</button>
+            {/*  <button onClick={(event: React.MouseEvent<HTMLButtonElement>)=>onClickHandler("Vit")}>NewButton-2</button>
             <button onClick={(event: React.MouseEvent<HTMLButtonElement>)=>onClickHandler("Ivan")}>NewButton-3</button>*/}
+            <button>FirstButton</button>
+            <button>SecontButton</button>
 
-            <button onClick={examp1}>-1-</button>
-            <button onClick={()=>examp2(100200)}>-2-</button>
         </div>
     )
 }

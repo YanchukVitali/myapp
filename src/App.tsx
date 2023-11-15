@@ -3,6 +3,7 @@ import './App.css';
 import {NewComponent} from "./NewComponent";
 import {Cars} from "./Cars";
 import {log} from "util";
+import {Button} from "./components/Button";
 
 function App() {
     /*   const students = [
@@ -22,41 +23,47 @@ function App() {
            {id: 2,manufacturer: 'Mercedes', model: 'e63s'},
            {id: 3,manufacturer: 'Audi', model: 'rs6'}
        ]*/
-
+    const Button1Vit = (subscriber:string) => {
+        console.log(subscriber)
+    }
+    const Button2Vit = (subscriber:string) => {
+        console.log(subscriber)
+    }
 
     return (
         <div className="App">
             {/* <NewComponent students={students}/>
             <Cars topCars={topCars}/>*/}
-            <NewButton/>
+            {/*<NewButton/>*/}
+            <Button name={"Favorite-1"} callBack={()=>Button1Vit("I am Vit")}/>
+            <Button name={"Favorite-2"} callBack={()=>Button2Vit("I am Anna")}/>
         </div>
     )
 }
 
 
-const NewButton = () => {
-    /*   const myFirstFollower = (event: React.MouseEvent<HTMLButtonElement>) => {
+/*const NewButton = () => {
+       const myFirstFollower = (event: React.MouseEvent<HTMLButtonElement>) => {
            console.log("Hello Vit")
        }
        const mySecondFollower = (event: React.MouseEvent<HTMLButtonElement>) => {
            console.log("Hello Ivan")
-       }*/
-    /*    const onClickHandler =(name:string) => {
+       }
+        const onClickHandler =(name:string) => {
             console.log(name)
         }
-  */
 
     return (
         <div className={"NewButton"}>
-            {/*<button onClick={(event) => {console.log("Hello")}}>NewButton</button>*/}
-            {/*<button onClick={myFirstFollower}>NewButton-2</button>
-            <button onClick={mySecondFollower}>NewButton-3</button>*/}
-            {/*  <button onClick={(event: React.MouseEvent<HTMLButtonElement>)=>onClickHandler("Vit")}>NewButton-2</button>
-            <button onClick={(event: React.MouseEvent<HTMLButtonElement>)=>onClickHandler("Ivan")}>NewButton-3</button>*/}
+            {/!*<button onClick={(event) => {console.log("Hello")}}>NewButton</button>*!/}
+            {/!*<button onClick={myFirstFollower}>NewButton-2</button>
+            <button onClick={mySecondFollower}>NewButton-3</button>*!/}
+            {/!*  <button onClick={(event: React.MouseEvent<HTMLButtonElement>)=>onClickHandler("Vit")}>NewButton-2</button>
+            <button onClick={(event: React.MouseEvent<HTMLButtonElement>)=>onClickHandler("Ivan")}>NewButton-3</button>*!/}
             <button>FirstButton</button>
-            <button>SecontButton</button>
+            <button>SecondButton</button>
 
         </div>
     )
-}
+}*/
 export default App;

@@ -5,7 +5,7 @@ import {Cars} from "./Cars";
 import {log} from "util";
 import {Button} from "./components/Button";
 
-function App() {
+function App()  {
     /*   const students = [
            {id: 1, name: "Vit", age: 33},
            {id: 2, name: "Dima", age: 32},
@@ -23,11 +23,14 @@ function App() {
            {id: 2,manufacturer: 'Mercedes', model: 'e63s'},
            {id: 3,manufacturer: 'Audi', model: 'rs6'}
        ]*/
-    const Button1Vit = (subscriber:string) => {
-        console.log(subscriber)
+    const Button1Vit = (subscriber:string, age:number, address: string) => {
+        console.log(subscriber, age, address)
     }
     const Button2Vit = (subscriber:string) => {
         console.log(subscriber)
+    }
+    const Button3Vit =()=>{
+        console.log("I am stupid Button ")
     }
 
     return (
@@ -35,8 +38,9 @@ function App() {
             {/* <NewComponent students={students}/>
             <Cars topCars={topCars}/>*/}
             {/*<NewButton/>*/}
-            <Button name={"Favorite-1"} callBack={()=>Button1Vit("I am Vit")}/>
+            <Button name={"Favorite-1"} callBack={()=>Button1Vit("I am Vit", 21, "Live in Boston")}/>
             <Button name={"Favorite-2"} callBack={()=>Button2Vit("I am Anna")}/>
+            <Button name={"Stupid Button"} callBack={Button3Vit}/>
         </div>
     )
 }
